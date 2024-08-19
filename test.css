@@ -1,0 +1,159 @@
+/* Styles globaux */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff0000, #ff9900, #33cc33, #00cccc, #0033cc, #9900cc, #ff3399, #ff0000);
+    background-size: 600% 600%;
+    animation: gradientBackground 60s ease infinite;
+    color: #fff;
+}
+
+/* Conteneur principal */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 100%; /* Assure que le conteneur ne dépasse pas l'écran */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+/* Animation de l'apparition du conteneur */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Styles pour les champs d'entrée et les boutons */
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+input {
+    max-width: 300px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Conteneur des résultats */
+.result-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Style pour les parties du temps */
+.time-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.number {
+    font-size: 2rem;
+    letter-spacing: 0.1em; /* Espacement entre les chiffres */
+    margin-bottom: 5px;
+}
+
+.label {
+    font-size: 1rem;
+}
+
+/* Conteneur des flèches */
+.arrow-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centre les flèches horizontalement */
+}
+
+/* Styles pour les flèches de navigation */
+.arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    user-select: none;
+    transition: color 0.3s, transform 0.3s;
+    margin: 0 20px;
+}
+
+.arrow:hover {
+    color: #4caf50;
+    transform: scale(1.2);
+}
+
+/* Animation de dégradé dynamique */
+@keyframes gradientBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Styles responsive pour les petits écrans */
+@media (max-width: 600px) {
+    .number {
+        font-size: 1.5rem; /* Réduit la taille des chiffres pour les petits écrans */
+    }
+
+    .label {
+        font-size: 0.9rem; /* Réduit la taille du texte des labels pour les petits écrans */
+    }
+
+    .arrow {
+        font-size: 1.5rem; /* Réduit la taille des flèches pour les petits écrans */
+        margin: 0 10px; /* Réduit l'espace autour des flèches */
+    }
+
+    .container {
+        padding: 10px; /* Réduit le padding pour les petits écrans */
+    }
+
+    /* Réduit la taille du texte des boutons et des champs d'entrée sur les petits écrans */
+    input, button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styles responsive pour les écrans moyens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .number {
+        font-size: 1.8rem; /* Taille légèrement réduite pour les écrans moyens */
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+
+    .arrow {
+        font-size: 1.8rem; /* Taille légèrement réduite pour les écrans moyens */
+        margin: 0 15px;
+    }
+}

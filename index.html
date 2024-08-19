@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de Temps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Compte à Rebours</h1>
+        <input type="date" id="dateInput" />
+        <button onclick="calculateTime()">Calculer le Temps</button>
+        <div id="result" class="result-group">
+            <!-- Les résultats seront affichés ici -->
+        </div>
+        <div class="arrow-container">
+            <span class="arrow" id="prev">&#9664;</span>
+            <span class="arrow" id="next">&#9654;</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
